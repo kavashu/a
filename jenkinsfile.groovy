@@ -28,7 +28,7 @@ timestamps {
         def releaseBundleName = params.releaseBundleName
         def pipelineUtils
         def artifactoryCredentialId = 'jfrog'
-
+withCredentials([string(credentialsId: 'jfrog', variable: 'jfrog')]) {
         stage("Checkout") {
             checkout scm
         }
@@ -183,7 +183,7 @@ timestamps {
 */        
 //*
         stage("Create release bundle") {
-            withCredentials([string(credentialsId: 'jfrog', variable: 'jfrog')]) {
+            
             rtServiceId = pipelineUtils.restGet("${rtFullUrl}/api/system/service_id", "${jfrog}")
 
 
@@ -221,7 +221,7 @@ timestamps {
 // echo "===========after JSON output============="
             res = pipelineUtils.restPost("${distributionUrl}/api/v1/release_bundle", artifactoryCredentialId, releaseBundleBodyJson)
  //echo "===========after rest call============="
-        }}
+        }
 
 
         stage('Distribute release bundle') {
