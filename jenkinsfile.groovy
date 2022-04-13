@@ -183,7 +183,8 @@ timestamps {
 */        
 //*
         stage("Create release bundle") {
-            rtServiceId = pipelineUtils.restGet("${rtFullUrl}/api/system/service_id", artifactoryCredentialId)
+            withCredentials([string(credentialsId: 'jfrog', variable: 'jfrog')]) {
+            rtServiceId = pipelineUtils.restGet("${rtFullUrl}/api/system/service_id", "${jfrog}")
 
 
             // def aqlQuery = 'items.find({"repo":{"$match":"myteam-*-prod-local"}})'
@@ -220,7 +221,7 @@ timestamps {
 // echo "===========after JSON output============="
             res = pipelineUtils.restPost("${distributionUrl}/api/v1/release_bundle", artifactoryCredentialId, releaseBundleBodyJson)
  //echo "===========after rest call============="
-       }
+        }}
 
 
         stage('Distribute release bundle') {
