@@ -29,6 +29,9 @@ timestamps {
         def pipelineUtils
         def artifactoryCredentialId = 'jfrog'
 
+        stage("Checkout") {
+            checkout scm
+        }
   
         stage("Preparations") {
             buildNumber = env.BUILD_NUMBER
