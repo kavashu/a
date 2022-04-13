@@ -13,7 +13,7 @@ properties(
 
 timestamps {
 
-    node {
+    node("test") {
 
         def server
         def rtFullUrl
