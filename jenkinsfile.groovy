@@ -234,3 +234,5 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrog')]) {
         }      
     }
 }
+
+}
