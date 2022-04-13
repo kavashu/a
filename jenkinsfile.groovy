@@ -4,7 +4,7 @@ properties(
     [
         parameters(
             [
-                string(name: 'distributionUrl',defaultValue: 'https://distribution-orendemo.jfrogdev.co', description: 'Distribution server URL'),
+                string(name: 'distributionUrl',defaultValue: 'https://shubhamdevops1.jfrog.io', description: 'Distribution server URL'),
                 string(name: 'releaseBundleName',defaultValue: 'myteam-project-bundle', description: 'release bundle name for distribution')
             ]
         )
