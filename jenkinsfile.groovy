@@ -28,7 +28,7 @@ timestamps {
         def releaseBundleName = params.releaseBundleName
         def pipelineUtils
         def artifactoryCredentialId = 'jfrog'
-withCredentials([string(credentialsId: 'jfrog', variable: 'jfrog')]) {
+withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
         stage("Checkout") {
             checkout scm
         }
@@ -49,6 +49,7 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrog')]) {
             mavenBuildName = "maven-${jobName}"
             dockerBuildName = "docker-${jobName}"
             server = Artifactory.server "jfrog"
+            server.username
             rtFullUrl = server.url      
             rtIpAddress = rtFullUrl - ~/^http?.:\/\// - ~/\/artifactory$/
             pipelineUtils = load 'pipelineUtils.groovy'
