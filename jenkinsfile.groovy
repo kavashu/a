@@ -66,7 +66,7 @@ timestamps {
             buildInfo = Artifactory.newBuildInfo()
             buildInfo.name = mavenBuildName
             buildInfo.env.collect()
-            rtMaven.run pom: 'demo/pomForEplus.xml', goals: mvnGoals, buildInfo: buildInfo
+            rtMaven.run pom: 'pomForEplus.xml', goals: mvnGoals, buildInfo: buildInfo
             server.publishBuildInfo buildInfo
         }
 
