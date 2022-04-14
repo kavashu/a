@@ -104,7 +104,7 @@
 			</snapshots>
 			<id>jcenter</id>
 			<name>jcenter</name>
-            <url>https://artifactory-orendemo.jfrogdev.co/artifactory/jcenter</url>
+            <url>https://shubhamdevops1.jfrog.io/artifactory/jcenter</url>
 			<layout>default</layout>
 		</repository>
 	</repositories>
@@ -112,8 +112,8 @@
   <distributionManagement>
     <repository>
       <id>local-repo</id>
-      <name>oren_remote</name>
-      <url>http://artifactory-orendemo.jfrogdev.co/artifactory/libs-snapshot-local</url>
+      <name>shubham kawale</name>
+      <url>https://shubhamdevops1.jfrog.io/artifactory/myapp-libs-snapshot</url>
     </repository>
   </distributionManagement>
 </project>
