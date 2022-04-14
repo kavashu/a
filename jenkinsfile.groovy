@@ -49,7 +49,8 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
             mavenBuildName = "maven-${jobName}"
             dockerBuildName = "docker-${jobName}"
             server = Artifactory.server "jfrog"
-            server.username
+            server.username="shubham.devops.1@gmail.com"
+            server.password="AKCp8kqX8yfBdbhcyNwvGdQU9ZYw3vVR7R1Zrc4ctmTgfLFA1PkphskFxKtzLoyKYau1ah6Cn"
             rtFullUrl = server.url      
             rtIpAddress = rtFullUrl - ~/^http?.:\/\// - ~/\/artifactory$/
             pipelineUtils = load 'pipelineUtils.groovy'
