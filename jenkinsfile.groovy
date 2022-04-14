@@ -86,7 +86,7 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
                     'targetRepo' : stagingPromotionRepo,
                     'comment'    : 'This is a stable java-project version',
                     'status'     : 'Released',
-                    'sourceRepo' : 'myteam-maven-dev-local',
+                    'sourceRepo' : 'demo-libs-snapshot-local',
                     'copy'       : true,
                     'failFast'   : true
             ]
@@ -113,7 +113,7 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
                     'targetRepo' : prodPromotionRepo,
                     'comment'    : 'This is a release ready java-project version',
                     'status'     : 'Scanned',
-                    'sourceRepo' : 'myteam-maven-stage-local',
+                    'sourceRepo' : 'demo-libs-snapshot-local',
                     'copy'       : true,
                     'failFast'   : true
             ]
