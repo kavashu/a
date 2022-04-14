@@ -62,7 +62,7 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
 
         stage("Build+Deploy") {
             def rtMaven = Artifactory.newMavenBuild()
-            rtMaven.deployer server: server, releaseRepo: 'myapp-libs-release', snapshotRepo: 'myapp-libs-snapshot'
+            rtMaven.deployer server: server, releaseRepo: 'myapp-demo-release', snapshotRepo: 'myapp-demo-snapshot'
             rtMaven.tool = 'mavenTool'
             String mvnGoals = "clean install -DartifactVersion=${buildNumber} -s settings.xml"
             buildInfo = Artifactory.newBuildInfo()

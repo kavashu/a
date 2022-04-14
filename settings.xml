@@ -21,14 +21,14 @@
             <enabled>false</enabled>
           </snapshots>
           <id>central</id>
-          <name>myapp-libs-release</name>
-          <url>https://shubhamdevops1.jfrog.io/artifactory/myapp-libs-release</url>
+          <name>myapp--demo-libs-release</name>
+          <url>https://shubhamdevops1.jfrog.io/artifactory/myapp--demo-libs-release</url>
         </repository>
         <repository>
           <snapshots />
           <id>snapshots</id>
-          <name>myapp-libs-snapshot</name>
-          <url>https://shubhamdevops1.jfrog.io/artifactory/myapp-libs-snapshot</url>
+          <name>myapp--demo-libs-snapshot</name>
+          <url>https://shubhamdevops1.jfrog.io/artifactory/myapp--demo-libs-snapshot</url>
         </repository>
       </repositories>
       <pluginRepositories>
@@ -37,14 +37,14 @@
             <enabled>false</enabled>
           </snapshots>
           <id>central</id>
-          <name>myapp-libs-release</name>
-          <url>https://shubhamdevops1.jfrog.io/artifactory/myapp-libs-release</url>
+          <name>myapp--demo-libs-release</name>
+          <url>https://shubhamdevops1.jfrog.io/artifactory/myapp--demo-libs-release</url>
         </pluginRepository>
         <pluginRepository>
           <snapshots />
           <id>snapshots</id>
-          <name>myapp-libs-snapshot</name>
-          <url>https://shubhamdevops1.jfrog.io/artifactory/myapp-libs-snapshot</url>
+          <name>myapp--demo-libs-snapshot</name>
+          <url>https://shubhamdevops1.jfrog.io/artifactory/myapp--demo-libs-snapshot</url>
         </pluginRepository>
       </pluginRepositories>
       <id>artifactory</id>
