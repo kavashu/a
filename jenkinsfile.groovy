@@ -185,7 +185,7 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
 */        
 //*
         stage("Create release bundle") {
-            echo "sdsdsdsdsdsds"
+        
             rtServiceId = pipelineUtils.restGet("${rtFullUrl}/api/system/service_id", "${jfrog}")
 
 echo "sdsdsdsdsdsds"
