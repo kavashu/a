@@ -221,7 +221,7 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
 // echo "${releaseBundleBodyJson}"
 
 // echo "===========after JSON output============="
-            res = pipelineUtils.restPost("${distributionUrl}/api/v1/release_bundle",'Bearer "${jfrogCred}"', releaseBundleBodyJson)
+            res = pipelineUtils.restPost("${distributionUrl}/api/v1/release_bundle",Bearer "${jfrogCred}", releaseBundleBodyJson)
  //echo "===========after rest call============="
         }
 
