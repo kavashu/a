@@ -102,7 +102,7 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
                     'buildNumber': buildInfo.number,
                     'failBuild'  : true
             ]
-            server.xrayScan scanConfig
+            //server.xrayScan scanConfig
         }
 
         stage("Promote to prod") {
