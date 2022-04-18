@@ -4,7 +4,7 @@ properties(
     [
         parameters(
             [
-                string(name: 'distributionUrl',defaultValue: 'https://shubhamdevops1.jfrog.io', description: 'Distribution server URL'),
+                string(name: 'distributionUrl',defaultValue: 'https://shubhamdevops1.jfrog.io/', description: 'Distribution server URL'),
                 string(name: 'releaseBundleName',defaultValue: 'myteam-project-bundle', description: 'release bundle name for distribution')
             ]
         )
@@ -185,7 +185,7 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
 */        
 //*
         stage("Create release bundle") {
-            echo "${rtFullUrl}api/system/service_id"
+            echo "${rtFullUrl}/api/system/service_id"
             rtServiceId = pipelineUtils.restGet("https://shubhamdevops1.jfrog.io/artifactory/api/system/service_id?", "${jfrogCred}")
 
 
@@ -205,7 +205,7 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
                         'content': "myteam release notes are very important"
                     ],
                     'spec': [
-                            'source_artifactory_id': "${rtServiceId}",
+                            'source_artifactory_id': "jfrt@01ftzpsnkmz4751h2ajvc41p8y",
                             'queries': [
                                     [
                                             'aql': "${aqlQuery}",
