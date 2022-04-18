@@ -24,7 +24,7 @@ def restGet(url, credentialId, contentType = 'APPLICATION_JSON') {
 }
 
 def restPost(url, credentialId, body, contentType = 'APPLICATION_JSON') {
-    res = httpRequest url: url, contentType: contentType, header: credentialId, httpMode: 'POST', requestBody: body, consoleLogResponseBody: true
+    res = httpRequest url: url, contentType: contentType, customHeaders: [Bearer: credentialId], httpMode: 'POST', requestBody: body, consoleLogResponseBody: true
     println res.getStatus()
     res.getContent()
 }
