@@ -185,10 +185,10 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
 */        
 //*
         stage("Create release bundle") {
-        
+            echo "${rtFullUrl}"
             rtServiceId = pipelineUtils.restGet("${rtFullUrl}/api/system/service_id", "${jfrog}")
 
-echo "sdsdsdsdsdsds"
+
             // def aqlQuery = 'items.find({"repo":{"$match":"myteam-*-prod-local"}})'
             // def aqlQuery = 'items.find( { "$and":[ { "repo":{"$match":"myteam-*-prod-local"} }, { "@build.number":"27" } ] } )'
             def aqlQuery = """items.find( { \"\$and\":[ { \"repo\":{\"\$match\":\"myteam-*-prod-local\"} }, { \"@build.number\":\"${buildNumber}\" } ] } )"""
