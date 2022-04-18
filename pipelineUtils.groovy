@@ -20,11 +20,11 @@ def restGet(url, credentialId, contentType = 'APPLICATION_JSON') {
     // res.setRequestHeader("Bearer ",credentialId)
     // println res.getStatus()
     // res.getContent()
-    
+
 }
 
 def restPost(url, credentialId, body, contentType = 'APPLICATION_JSON') {
-    res = httpRequest url: url, contentType: contentType, authentication: credentialId, httpMode: 'POST', requestBody: body, consoleLogResponseBody: true
+    res = httpRequest url: url, contentType: contentType, header: credentialId, httpMode: 'POST', requestBody: body, consoleLogResponseBody: true
     println res.getStatus()
     res.getContent()
 }
