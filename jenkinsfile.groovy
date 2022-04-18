@@ -186,7 +186,7 @@ withCredentials([string(credentialsId: 'jfrog', variable: 'jfrogCred')]) {
 //*
         stage("Create release bundle") {
             echo "${rtFullUrl}"
-            rtServiceId = pipelineUtils.restGet("${rtFullUrl}/api/system/service_id", "${jfrog}")
+            rtServiceId = pipelineUtils.restGet("${rtFullUrl}api/system/service_id", "${jfrog}")
 
 
             // def aqlQuery = 'items.find({"repo":{"$match":"myteam-*-prod-local"}})'
