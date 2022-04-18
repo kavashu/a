@@ -17,7 +17,7 @@ def withRetry(iterations, sleepTime, Closure closure) {
 
 def restGet(url, credentialId, contentType = 'APPLICATION_JSON') {
     res = httpRequest url: url, contentType: contentType, consoleLogResponseBody: true
-    res.setRequestHeader("X-Vault-Token","${credentialId}")
+    res.setRequestHeader("Bearer ",credentialId)
     println res.getStatus()
     res.getContent()
 }
