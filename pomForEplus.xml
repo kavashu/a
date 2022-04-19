@@ -4,7 +4,7 @@
 
   <groupId>com.in</groupId>
   <artifactId>myapp</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>${artifactVersion}-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <name>myapp</name>

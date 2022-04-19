@@ -27,7 +27,7 @@ def restPost(url, credentialId, body, contentType = 'APPLICATION_JSON') {
     // res = httpRequest url: url, contentType: contentType, customHeaders: [Bearer: credentialId], httpMode: 'POST', requestBody: body, consoleLogResponseBody: true
     // println res.getStatus()
     // res.getContent()
-    sh "curl  -u ${jfrogCred}: -d ${body} ${url} "
+    sh "curl -x POST -u ${jfrogCred}: -d ${body} ${url} "
     //sh "cat data.json"
 
 }
